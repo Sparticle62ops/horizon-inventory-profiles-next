@@ -1,0 +1,43 @@
+id = "inventory_profiles_next"
+name = "Inventory Profiles Next"
+version = "1.0.0"
+description = """Inventory sorting and profiles for Horizon. Exact 1:1 Rust
+port of Inventory Profiles Next (upstream
+https://codeberg.org/Inventory-Profiles-Next-Mod/IPN, AGPL-3.0-or-later,
+upstream LICENSE shipped in the package).
+
+## What ships today
+
+The inventory core, compiled and tested on the pinned SDK: the container
+grid model (width-by-height stacks), IPN's sorting comparators (by item
+name, by name then count, by count), ascending/descending order, the
+rows/columns layout switch, and the minimal move plan that turns a sort
+into the shortest list of slot moves.
+
+## Horizon feature gaps, tracked on horizon-rust/horizon
+
+1. Client container-screen interaction. IPN's point is acting on the
+   player's real inventory: read the open screen's slots, and perform the
+   move plan as slot clicks (pick up, quick-move, swap). Horizon's mod API
+   exposes menu definitions and clicks for menus the game opens, but not a
+   client surface to query and act on the player's own container screen
+   (slot reads and slot clicks from a mod). When it lands, the move plan
+   wires to it as-is.
+
+Pinned to Horizon f00125f61f794aaa3d4e950d301f353b35b6ee3d, horizon-mixins
+e59da9094f0c2fdda6c627fe9eff22dec6a906f0 and mod API 0.2; exact 1:1 Rust
+port tested against those revisions.
+
+Licence: AGPL-3.0-or-later (upstream, carried). Upstream:
+https://codeberg.org/Inventory-Profiles-Next-Mod/IPN.
+Source: https://github.com/Sparticle62ops/horizon-inventory-profiles-next
+"""
+authors = ["sparticle"]
+api = "0.2"
+side = "client"
+capabilities = []
+
+[native]
+game = "26.3"
+horizon = "f00125f61f794aaa3d4e950d301f353b35b6ee3d"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"

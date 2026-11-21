@@ -1,12 +1,26 @@
 [package]
 name = "horizon-mod-inventory-profiles-next"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
 license = "AGPL-3.0-or-later"
 publish = false
-description = "Slice 1 of a Horizon port of Inventory Profiles Next: the inventory grid model, sorting and the move plan that produces the slot clicks."
+description = "Exact 1:1 Rust port of Inventory Profiles Next (upstream codeberg.org/Inventory-Profiles-Next-Mod/IPN, AGPL-3.0-or-later): the inventory grid model, sorting comparators, layouts and the move plan that produces the slot clicks."
 
 [lib]
 path = "src/lib.rs"
 
+[dependencies]
+horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }
+
 [workspace]
+
+[workspace.package]
+edition = "2024"
+license = "AGPL-3.0-or-later"
+rust-version = "1.95"
+
+[workspace.lints.clippy]
+too_many_arguments = "allow"
+type_complexity = "allow"
+needless_range_loop = "allow"
+large_enum_variant = "allow"

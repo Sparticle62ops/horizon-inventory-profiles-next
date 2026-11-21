@@ -1,6 +1,6 @@
 # inventory-profiles-next (Horizon Rust port)
 
-Behavioral port of [Inventory Profiles Next](https://github.com/shirkaness/inventory-profiles-next) (AGPL-3.0-or-later) for the Horizon client. Port repo: `Sparticle62ops/horizon-inventory-profiles-next`; master copy in `horizon-modport/ports/inventory-profiles-next`.
+Behavioral port of [Inventory Profiles Next](https://codeberg.org/Inventory-Profiles-Next-Mod/IPN) (AGPL-3.0-or-later) for the Horizon client. Port repo: `Sparticle62ops/horizon-inventory-profiles-next`; master copy in `horizon-modport/ports/inventory-profiles-next`.
 
 ## Status
 - [x] Slice 1: the core logic. Inventory grid model, sort comparators (name, name-then-count, count; ascending/descending), row and column layouts, and the minimal move plan (each displaced stack moves once; already-sorted grids produce zero moves). 7/7 tests.
